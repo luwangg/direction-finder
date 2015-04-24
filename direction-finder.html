@@ -25,13 +25,16 @@
 	<body>
 		<div class="container">			
 			<h1 class="text-center">Find Driving Directions</h1>
-			<p class="text-center">A simple clone of Google Maps' most important function</p>
+			<p class="text-center">A simple representation of Google Maps' most important function</p>
 			<!-- <div class="col-md-6"> -->
 				<input type="text" name="from" id="from" class="form-control" value="" required="required" placeholder="From">
 				<input type="text" name="to" id="to" class="form-control" value="" required="required" placeholder="To">
 			<!-- </div> -->
 
 			<div id="start-location"></div>
+
+			<h4><span id="warnings" class="label label-warning"></span></h4>
+			<div id="dir-panel"></div>
 		</div>
 
 		<!-- Google Maps API -->

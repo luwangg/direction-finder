@@ -29,6 +29,10 @@ function calcRoute() {
   directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
      directionsDisplay.setDirections(response);
+     document.getElementById("warnings").innerHTML = "";
+   } 
+   else if (status == google.maps.DirectionsStatus.ZERO_RESULTS) {
+     document.getElementById("warnings").innerHTML += "<br/> No driving route can be found between the starting location and final destination.";
    }
   });
   }
@@ -40,6 +44,8 @@ function initialize() {
 		
 		// Initialzie directions display service
 		directionsDisplay = new google.maps.DirectionsRenderer({map: map});
+
+    directionsDisplay.setPanel(document.getElementById("dir-panel"));
 
 		// Search box linked to the UI element
 		var searchBoxFrom = new google.maps.places.SearchBox((startInput));
