@@ -1,2 +1,4 @@
 # direction-finder
-A clone of the Google Maps directions finding function. Google Maps API
+A simple representation of an important Google Maps function–finding driving directions between two places, utilizing Google Maps Javascript API v3.
+
+![screenshot](./directions.png)
